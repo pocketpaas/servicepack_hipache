@@ -1,0 +1,18 @@
+#!/bin/bash
+
+TYPE=$1
+
+case $TYPE in
+    os)
+        echo 'ubuntu/12.04';;
+    env)
+        echo 'HIPACHE_PORT=80'
+        echo 'HIPACHE_HOST=%IP'
+        echo 'REDIS_PORT=6379'
+        echo 'REDIS_HOST=%IP'
+        ;;
+    components)
+        echo 'hipache'
+        echo 'redis'
+        ;;
+esac

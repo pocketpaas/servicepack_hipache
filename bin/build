@@ -1,0 +1,16 @@
+#!/bin/bash
+
+BUILD_TYPE=${1:-all}
+
+if [[ $BUILD_TYPE = 'all' || $BUILD_TYPE = 'base' ]]; then
+
+    # no need to add universe to apt sources, servicepack does it
+    apt-get update
+
+    # install redis
+    apt-get -y install git wget redis-server
+
+    # install node/hipache
+    wget -O - http://nodejs.org/dist/v0.8.23/node-v0.8.23-linux-x64.tar.gz | tar -C /usr/local/ --strip-components=1 -zxv
+    npm install hipache -g
+fi

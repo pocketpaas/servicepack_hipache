@@ -1,0 +1,12 @@
+#!/bin/bash
+
+TYPE=$1
+
+case $TYPE in
+    redis)
+        exec /usr/bin/redis-server
+        ;;
+    hipache)
+        exec /usr/local/bin/hipache -c /usr/local/lib/node_modules/hipache/config/config_dev.json
+        ;;
+esac
