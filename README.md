@@ -1,1 +1,1 @@
-A servicepack for Hipache.
+A [servicepack](https://github.com/pocketpaas/servicepack) for Hipache.
